@@ -1,0 +1,7 @@
+package com.StudentManagement.Config;
+
+import org.springframework.web.WebApplicationInitializer;
+
+public class WebxmlInitailizer implements WebApplicationInitializer{
+
+}

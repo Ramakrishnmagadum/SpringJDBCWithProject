@@ -1,0 +1,9 @@
+INDEX VERSION 1.131
+D:\Workspace\Spring JDBC Concept with Project\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2213731838.index
+\student-Management\src\main\java
+D:\Workspace\Spring JDBC Concept with Project\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\347104207.index
+\SpringJDBC001\src\main\resources
+D:\Workspace\Spring JDBC Concept with Project\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3859609900.index
+\student-Management\src\main\resources
+D:\Workspace\Spring JDBC Concept with Project\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2987079205.index
+\SpringJDBC_WebAwareBeanScope\src\main\resources

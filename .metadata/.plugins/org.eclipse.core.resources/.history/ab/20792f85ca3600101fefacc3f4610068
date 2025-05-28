@@ -1,0 +1,9 @@
+package com.StudentManagement.Service;
+
+import java.util.List;
+
+import com.StudentManagement.Entities.StudentBean;
+
+public interface StudentDAO {
+	public List<StudentBean>  showstudentlist();
+}

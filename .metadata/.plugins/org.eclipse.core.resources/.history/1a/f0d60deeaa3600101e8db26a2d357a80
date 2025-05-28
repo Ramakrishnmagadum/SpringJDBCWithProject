@@ -1,0 +1,22 @@
+package com.StudentManagement.Service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Service;
+
+import com.StudentManagement.Entities.StudentBean;
+
+@Service
+public class StudentDAOImpl {
+	
+	@Autowired
+	JdbcTemplate jdbcTemplate;
+	
+	public List<StudentBean>  showstudentlist(){
+		String sql ="select * from student";
+		return jdbcTemplate.query(sql, new StudentRowMapper());
+	}
+
+}

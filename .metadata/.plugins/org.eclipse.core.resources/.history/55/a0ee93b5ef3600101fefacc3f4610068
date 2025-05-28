@@ -1,0 +1,7 @@
+package com.StudentManagement.Beans;
+
+public class StudentDto {
+	private String name;
+	private Long mobile;
+	private String country ;
+}

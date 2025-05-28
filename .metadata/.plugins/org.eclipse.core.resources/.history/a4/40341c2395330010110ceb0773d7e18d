@@ -1,0 +1,32 @@
+package Com.Controller;
+
+import java.io.IOException;
+
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import Com.Entites.StudentBean;
+
+@Controller
+public class MyController {
+	@Autowired
+	StudentBean bean;
+	
+	@RequestMapping("/testing1")
+	public void GetTestMethod(HttpServletResponse response) throws IOException {
+		response.setContentType("html");
+		response.getWriter().write("My Name is "+ bean.getName() +" <br>");
+		bean.setName("prashant");
+		response.getWriter().write("Updated  Name is "+ bean.getName() +" <br>");	
+	}
+	
+//	@RequestMapping("/testing2")
+//	public void GetTestMethod2(HttpServletResponse response) throws IOException {
+//	response.getWriter().write("My Name is "+ bean.getName() +" <br>");
+//		
+//	}
+
+}

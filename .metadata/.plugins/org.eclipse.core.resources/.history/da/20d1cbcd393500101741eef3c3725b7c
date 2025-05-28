@@ -1,0 +1,36 @@
+package Com.SessionScope;
+
+import java.io.IOException;
+
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.context.annotation.RequestScope;
+
+@Controller
+public class MyController {
+
+//	this Object will create only one for one session.......
+	@Autowired
+	StudentBean bean;
+
+//This is Follow the session Scope --> Session Scope means User Having the Data in session Object once login ,,upto some time data will be avalibale for same user
+//	So this   Object will be  their --> whenever the use make ask object or any request ---> from session Object will return ...
+//	So /testing1 and /testing2 with same user it will have same data or same object will return.......
+	@RequestMapping("/sessionTesting1")
+	public void GetTestMethod(HttpServletResponse response) throws IOException {
+		response.setContentType("html");
+		response.getWriter().write("My Name is " + bean.getName() + " <br>");
+		bean.setName("prashant");
+		response.getWriter().write("Updated  Name is " + bean.getName() + " <br>");
+	}
+
+	@RequestMapping("/sessionTesting2")
+	public void GetTestMethod2(HttpServletResponse response) throws IOException {
+		response.getWriter().write("My Name is " + bean.getName() + " <br>");
+
+	}
+
+}

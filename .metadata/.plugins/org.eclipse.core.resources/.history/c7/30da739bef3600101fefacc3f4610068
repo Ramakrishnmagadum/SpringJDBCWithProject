@@ -1,0 +1,5 @@
+package com.StudentManagement.Beans;
+
+public class StudentBean {
+
+}

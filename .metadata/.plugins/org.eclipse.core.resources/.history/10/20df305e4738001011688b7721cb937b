@@ -1,0 +1,25 @@
+package com.StudentManagement.DAO;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import org.springframework.dao.DataAccessException;
+import org.springframework.jdbc.core.ResultSetExtractor;
+
+import com.StudentManagement.Beans.StudentDto;
+
+public class StudentResultExtractor implements ResultSetExtractor {
+
+	public Object extractData(ResultSet rs) throws SQLException, DataAccessException {
+		
+	if(rs.next()) {
+		StudentDto bean=new StudentDto();
+		bean.setStdid(rs.getInt(1));
+		bean.setStdname(rs.getString(2));
+		bean.setStdmobile(rs.getLong(3));
+		bean.setStdcountry(rs.getString(4));
+	}
+		return bean;
+	}
+
+}

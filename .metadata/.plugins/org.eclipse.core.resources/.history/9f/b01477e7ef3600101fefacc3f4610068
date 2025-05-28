@@ -1,0 +1,29 @@
+package com.StudentManagement.Service;
+
+	import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
+
+import com.StudentManagement.Beans.StudentDto;
+import com.StudentManagement.Entities.StudentBean;
+
+@Repository
+public class StudentDAOImpl implements StudentDAO {
+	
+	@Autowired
+	JdbcTemplate jdbcTemplate;
+	
+	public List<StudentBean>  showstudentlist(){
+		String sql ="select * from student";
+		return jdbcTemplate.query(sql, new StudentRowMapper());
+	}
+
+	public int addStudent(StudentDto student) {
+		String sql="insert into student values(name , mobile , country)";
+		Object[] objarr= {4, student.getName() ,student.getMobile(),student.getCountry()};
+		return jdbcTemplate.update(sql,  objarr);
+	}
+
+}

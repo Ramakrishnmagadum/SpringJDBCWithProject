@@ -1,0 +1,14 @@
+package com.StudentManagement.Config;
+
+import org.springframework.web.WebApplicationInitializer;
+
+
+
+public class WebXmlInitailizer implements WebApplicationInitializer{
+
+	public void onStartup(ServletContext servletContext) throws ServletException {
+		
+		
+	}
+
+}

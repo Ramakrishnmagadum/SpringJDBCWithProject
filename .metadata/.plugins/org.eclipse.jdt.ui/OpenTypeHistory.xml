@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+<typeInfo handle="=SpringJDBC001/C:\/Users\/ramakrishnamagadum.k\/.m2\/repository\/org\/springframework\/spring-jdbc\/5.2.2.RELEASE\/spring-jdbc-5.2.2.RELEASE.jar&lt;org.springframework.jdbc.core(JdbcTemplate.class[JdbcTemplate" modifiers="33" timestamp="1744174815092"/>
+<typeInfo handle="=SpringJDBC001/C:\/Program Files\/Java\/jre1.8.0_202\/lib\/rt.jar&lt;javax.sql(DataSource.class[DataSource" modifiers="1537" timestamp="1709707385520"/>
+<typeInfo handle="=student-Management/C:\/Users\/ramakrishnamagadum.k\/.m2\/repository\/org\/springframework\/spring-webmvc\/5.2.2.RELEASE\/spring-webmvc-5.2.2.RELEASE.jar&lt;org.springframework.web.servlet.view(InternalResourceViewResolver.class[InternalResourceViewResolver" modifiers="33" timestamp="1747793597429"/>
+<typeInfo handle="=SpringJDBC001/C:\/Users\/ramakrishnamagadum.k\/.m2\/repository\/org\/springframework\/spring-jdbc\/5.2.2.RELEASE\/spring-jdbc-5.2.2.RELEASE.jar&lt;org.springframework.jdbc.datasource(DriverManagerDataSource.class[DriverManagerDataSource" modifiers="33" timestamp="1744174815092"/>
+</typeInfoHistroy>

@@ -1,0 +1,61 @@
+package com.StudentManagement.Controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.StudentManagement.Beans.StudentDto;
+import com.StudentManagement.DAO.StudentDAO;
+import com.StudentManagement.Entities.StudentEntity;
+import com.StudentManagement.Service.StudentService;
+
+@Controller
+public class StudentController {
+	
+	@Autowired
+	StudentService studentService;
+	
+	@GetMapping("/showStudent")	
+	public String showStudentList(Model model) {
+		List<StudentEntity> studentlist = studentService.showstudentlist();
+		for(StudentEntity templist : studentlist) {
+			System.out.println(templist);
+		}
+		
+		model.addAttribute("students", studentlist);
+		return "student-list";
+	}
+	
+	@GetMapping("/addStudent")
+	public String addStudent(@ModelAttribute("studentinfo")StudentDto studentDto) {
+		if(studentDto.getStdid()!=null) {
+			StudentDto bean =studentService.getStudentById(studentDto.getStdid());
+			System.out.println(bean);
+			studentDto.setStdname(bean.getStdname());
+			studentDto.setStdmobile(bean.getStdmobile());
+			studentDto.setStdcountry(bean.getStdcountry());
+		}
+	
+		return "add-student";
+	}
+	
+//	StudentDto --> this is Data Transfer class --> this will hide the Table column name in frontend Side Code...
+	@PostMapping("/saveStudent")
+	public String saveStudent( @RequestParam(name="id" , required=false) int id ,StudentDto student)//this will capture the record from the "add-student" Jsp Page..... 
+	{
+		student.setStdid(id);
+System.out.println("student id "+student.getStdid());
+		int count = studentService.addStudent(student);
+//		-------  Post-Redirect-Get Pattern...
+			return "redirect:/showStudent";
+	}
+	
+	
+
+}

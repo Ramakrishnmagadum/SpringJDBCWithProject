@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Sat May 24 21:57:29 IST 2025
+org.eclipse.jst.j2ee.server\:/binary\:C\:\\Users\\ramakrishnamagadum.k\\.m2\\repository\\org\\springframework\\spring-web\\5.3.31\\spring-web-5.3.31.jar=WEB-INF/lib/spring-web-5.3.31.jar
+org.eclipse.jst.j2ee.server\:/binary\:C\:\\Users\\ramakrishnamagadum.k\\.m2\\repository\\org\\springframework\\spring-web\\5.2.2.RELEASE\\spring-web-5.2.2.RELEASE.jar=WEB-INF/lib/spring-web-5.2.2.RELEASE.jar

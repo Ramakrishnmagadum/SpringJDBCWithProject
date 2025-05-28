@@ -1,0 +1,14 @@
+package com.StudentManagement.Service;
+
+import java.util.List;
+
+import com.StudentManagement.Beans.StudentDto;
+import com.StudentManagement.Entities.StudentEntity;
+
+public interface StudentService {
+public List<StudentEntity>  showstudentlist();
+	
+	public int addStudent(StudentDto student);
+	
+	public StudentDto getStudentById(int studentId);
+}

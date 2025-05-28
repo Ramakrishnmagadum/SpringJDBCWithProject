@@ -1,0 +1,10 @@
+@charset "ISO-8859-1";
+
+h2{
+	color: red;
+}
+
+.image {
+width: 100%;
+background-repeat: space; 
+}

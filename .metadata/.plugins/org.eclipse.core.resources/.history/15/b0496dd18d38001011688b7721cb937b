@@ -1,0 +1,9 @@
+@charset "ISO-8859-1";
+
+h2{
+	color: red;
+}
+
+.image {
+background-size: cover;
+}
