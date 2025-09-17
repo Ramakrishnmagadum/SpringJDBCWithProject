@@ -1,8 +1,0 @@
-package com.StudentManagement.Entities;
-
-import org.springframework.stereotype.Component;
-
-@Component
-public class StudentBean {
-
-}
